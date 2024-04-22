@@ -1,0 +1,10 @@
+.nav-bar-container {
+  display: flex;
+  flex-direction: row;
+  /* -ms-flex-item-align: stretch; */
+  background-color: rgb(91, 91, 91);
+  width: 100vw;
+  height: 15vh;
+  padding: 0px 0px;
+  margin: 0px;
+}
