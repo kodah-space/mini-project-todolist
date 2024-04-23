@@ -1,0 +1,19 @@
+.todolist-container {
+  background-color: rgba(201, 150, 150, 0.5);
+  width: 100%;
+  height: 75vh;
+  padding: 10px;
+}
+
+.todo-item-container {
+  display: flex;
+  border: 1px;
+  border-style: dashed;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.taskName {
+  padding: 5px;
+  color: black;
+}
