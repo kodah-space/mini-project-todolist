@@ -10,7 +10,8 @@ const todosData = [
 
 function Dashboard() {
   const [todos, setTodos] = useState(todosData);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(todos.length);
+  const [isCompletedCount, setisCompletedCount] = useState("");
   // filter the todosData checke how many is false and how many is true and inside html tag
 
   const [inputValue, setInputValue] = useState("");
@@ -32,6 +33,7 @@ function Dashboard() {
       const todosCopy = [...todos, newTodoItem]; // Create a new array with the new task addedtri
       console.log(todosCopy);
       setTodos(todosCopy); // Update the tasks state
+      setCount((prevCount) => prevCount + 1);
       setInputValue(""); // Clear the input field
     }
   };
@@ -41,6 +43,7 @@ function Dashboard() {
       return todo.id !== todoId;
     });
     setTodos(filteredTodos);
+    setCount((prevCount) => prevCount - 1);
   };
 
   function toggleIsCompleted(todoId) {
@@ -49,7 +52,10 @@ function Dashboard() {
         item.id === todoId ? { ...item, isCompleted: !item.isCompleted } : item
       )
     );
-    let result = todos.filter((word) => word.length > 6);
+    setisCompletedCount(
+      todos.filter((obj) => obj.isCompleted === true).length + 1
+    );
+    // let result = todos.filter((word) => word.length > 6);
   }
 
   return (
@@ -65,6 +71,10 @@ function Dashboard() {
         />
         <button type="submit">+</button>
       </form>
+
+      <p>
+        {isCompletedCount}/{count} done
+      </p>
 
       <TodoList
         todos={todos}
