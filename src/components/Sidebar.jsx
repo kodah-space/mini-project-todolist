@@ -11,6 +11,9 @@ function Sidebar() {
           <Link to="/"> Dashboard </Link> {/* <== ADD */}
         </li>
         <li>
+          <Link to="/lists"> Lists </Link> {/* <== ADD */}
+        </li>
+        <li>
           <Link to="/about"> About </Link> {/* <== ADD */}
         </li>
 
