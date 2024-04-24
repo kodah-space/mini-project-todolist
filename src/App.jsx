@@ -7,7 +7,7 @@ import PageNotFound from "./components/PageNotFound";
 import About from "./pages/About";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/ListOfTodos";
 import Lists from "./pages/Lists";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/dashboard/:listId" element={<Dashboard />} />
-          <Route path="/lists" element={<Lists />} />
+          <Route path="/" element={<Lists />} />
           <Route path="/about" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<PageNotFound />} />

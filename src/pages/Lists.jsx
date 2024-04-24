@@ -2,6 +2,7 @@ import React from "react";
 import "./Lists.css";
 import ListItems from "../components/ListItems";
 import { useState } from "react";
+import Dashboard from "./ListOfTodos";
 
 // const todosData = [
 //   { id: 1, taskName: "Do laundry", isCompleted: false },
@@ -80,6 +81,7 @@ function Lists() {
         {isCompletedCount}/{count} done
       </p> */}
       <ListItems list={list} handleDelete={handleDelete} />
+      <Dashboard />
     </div>
   );
 }

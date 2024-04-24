@@ -1,8 +1,8 @@
 import React from "react";
-import "./Dashboard.css";
+import "./ListOfTodos.css";
 import TodoList from "../components/TodoList";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
 // const todosData = [
 //   { id: 1, taskName: "Do laundry", isCompleted: false },
@@ -28,15 +28,23 @@ const listData = [
   },
 ];
 
-function Dashboard() {
+function ListOfTodos({ listItem }) {
+  console.log(useLocation().state);
+  const { listId } = useParams();
+  // const location = useLocation();
+  // const { listItem } = location.state || {};
+  //const { listItem } = location.state || {};
+  // console.log(listItem);
+
   const [todos, setTodos] = useState(listData[1].tasks);
   const [count, setCount] = useState(todos.length);
   const [isCompletedCount, setisCompletedCount] = useState("");
-  let { listId } = useParams();
-  const studentProfile = listData.find((e) => e.id === listId);
+  console.log(listId);
+  const listContent = listData.find((e) => e.id === listId);
+  console.log(listContent);
 
   // filter the todosData checke how many is false and how many is true and inside html tag
-  console.log(todos);
+
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
@@ -83,11 +91,12 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <h2>Dashboard</h2>
+      <h2>Task Items</h2>
 
       <form onSubmit={handleAddTask}>
         <input
           type="text"
+          className="task-form"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Add a new task"
@@ -109,4 +118,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default ListOfTodos;
