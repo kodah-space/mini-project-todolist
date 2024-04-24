@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import TodoList from "./TodoList";
+import TodoList from "../components/TodoList";
 import { useState } from "react";
 
 const todosData = [
