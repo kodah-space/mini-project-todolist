@@ -58,8 +58,8 @@ function ListOfTodos() {
   }
 
   return (
-    <div className="list-container">
-      <h2>Task</h2>
+    <div className="lists-container">
+      <h2>{oneList.listName}</h2>
 
       <form className="input-group" onSubmit={handleAddTask}>
         <input

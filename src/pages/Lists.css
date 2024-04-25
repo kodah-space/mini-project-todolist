@@ -6,6 +6,13 @@
   width: 100%;
 }
 
+.lists-container {
+  background-color: #dcdada;
+  border: dashed 2px #721c24;
+  padding: 1rem;
+
+  width: 100%;
+}
 .input-group {
   display: flex;
   margin-bottom: 1rem;

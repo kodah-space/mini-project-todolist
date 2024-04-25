@@ -45,7 +45,7 @@ function Lists() {
   };
 
   return (
-    <div className="list-container">
+    <div className="lists-container">
       <h2>List</h2>
       <form className="input-group" onSubmit={handleAddList}>
         <input
