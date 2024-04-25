@@ -2,37 +2,16 @@ import React from "react";
 import "./Lists.css";
 import ListItems from "../components/ListItems";
 import { useState } from "react";
-import Dashboard from "./ListOfTodos";
-
+// import Dashboard from "./ListOfTodos";
+import listData from "../assets/listData.json";
 // const todosData = [
 //   { id: 1, taskName: "Do laundry", isCompleted: false },
 //   { id: 2, taskName: "Grocery shopping", isCompleted: false },
 // ];
 
-const listData = [
-  {
-    id: 1,
-    listName: "homestuff",
-    tasks: [
-      { tId: 1, taskName: "Do laundry", isCompleted: false },
-      { tId: 2, taskName: "Grocery shopping", isCompleted: false },
-    ],
-  },
-  {
-    id: 2,
-    listName: "School Stuff",
-    tasks: [
-      { tId: 1, taskName: "Homeworks", isCompleted: false },
-      { tId: 2, taskName: "Assignment", isCompleted: false },
-    ],
-  },
-];
-
 function Lists() {
   const [list, setList] = useState(listData);
   const [count, setCount] = useState(list.length);
-
-  console.log(list);
 
   const [inputValue, setInputValue] = useState("");
 
@@ -81,7 +60,7 @@ function Lists() {
         {isCompletedCount}/{count} done
       </p> */}
       <ListItems list={list} handleDelete={handleDelete} />
-      <Dashboard />
+      {/* <Dashboard /> */}
     </div>
   );
 }

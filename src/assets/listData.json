@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "listName": "homestuff",
+    "tasks": [
+      {
+        "tId": 1,
+        "taskName": "Do laundry",
+        "isCompleted": false
+      },
+      {
+        "tId": 2,
+        "taskName": "Grocery shopping",
+        "isCompleted": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "listName": "School Stuff",
+    "tasks": [
+      {
+        "tId": 1,
+        "taskName": "Homeworks",
+        "isCompleted": false
+      },
+      {
+        "tId": 2,
+        "taskName": "Assignment",
+        "isCompleted": false
+      }
+    ]
+  }
+]

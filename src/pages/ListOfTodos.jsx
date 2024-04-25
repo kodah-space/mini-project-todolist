@@ -3,45 +3,14 @@ import "./ListOfTodos.css";
 import TodoList from "../components/TodoList";
 import { useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
+import listData from "../assets/listData.json";
 
-// const todosData = [
-//   { id: 1, taskName: "Do laundry", isCompleted: false },
-//   { id: 2, taskName: "Grocery shopping", isCompleted: false },
-// ];
-
-const listData = [
-  {
-    id: 1,
-    listName: "homestuff",
-    tasks: [
-      { tId: 1, taskName: "Do laundry", isCompleted: false },
-      { tId: 2, taskName: "Grocery shopping", isCompleted: false },
-    ],
-  },
-  {
-    id: 2,
-    listName: "School Stuff",
-    tasks: [
-      { tId: 1, taskName: "Homeworks", isCompleted: false },
-      { tId: 2, taskName: "Assignment", isCompleted: false },
-    ],
-  },
-];
-
-function ListOfTodos({ listItem }) {
-  console.log(useLocation().state);
+function ListOfTodos() {
   const { listId } = useParams();
-  // const location = useLocation();
-  // const { listItem } = location.state || {};
-  //const { listItem } = location.state || {};
-  // console.log(listItem);
-
-  const [todos, setTodos] = useState(listData[1].tasks);
+  const oneList = listData.find((list) => list.id === +listId);
+  const [todos, setTodos] = useState(oneList.tasks);
   const [count, setCount] = useState(todos.length);
   const [isCompletedCount, setisCompletedCount] = useState("");
-  console.log(listId);
-  const listContent = listData.find((e) => e.id === listId);
-  console.log(listContent);
 
   // filter the todosData checke how many is false and how many is true and inside html tag
 
@@ -62,7 +31,6 @@ function ListOfTodos({ listItem }) {
         isCompleted: false,
       };
       const todosCopy = [...todos, newTodoItem]; // Create a new array with the new task addedtri
-      console.log(todosCopy);
       setTodos(todosCopy); // Update the tasks state
       setCount((prevCount) => prevCount + 1);
       setInputValue(""); // Clear the input field
@@ -91,7 +59,7 @@ function ListOfTodos({ listItem }) {
 
   return (
     <div className="dashboard-container">
-      <h2>Task Items</h2>
+      <h2>Task</h2>
 
       <form onSubmit={handleAddTask}>
         <input

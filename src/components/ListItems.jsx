@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Dashboard from "../pages/ListOfTodos";
 
 function ListItems({ list, handleDelete }) {
-  console.log(list);
-
   return (
     <div>
       <div className="list-container">
@@ -15,7 +13,6 @@ function ListItems({ list, handleDelete }) {
             <Link
               to={{
                 pathname: `/dashboard/${e.id}`,
-                state: { listItem: e.listName },
               }}
               key={e.id}
             >
