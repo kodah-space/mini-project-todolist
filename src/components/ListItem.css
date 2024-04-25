@@ -1,0 +1,29 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 1px solid #721c24;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #504949;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #403939;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1rem;
+}

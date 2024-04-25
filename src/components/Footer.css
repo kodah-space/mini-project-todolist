@@ -1,8 +1,11 @@
 .footer-container {
-  display: flex;
-  background-color: rgba(99, 99, 99, 0.874);
-  width: 100vw;
-  height: 10vh;
-  /* padding: 10px 10px; */
-  /* margin: 10px; */
+  text-align: center;
+  padding: 1rem;
+  background-color: #764248;
+  color: white;
+}
+
+/* Utility classes for text */
+.text-center {
+  text-align: center;
 }

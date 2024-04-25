@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoList.css";
+import "./ListItem.css";
 import { useState } from "react";
 
 // const todosData = [
@@ -9,12 +9,14 @@ import { useState } from "react";
 
 function TodoList({ todos, handleDelete, toggleIsCompleted }) {
   return (
-    <div className="todolist-container">
+    <div className="list-container">
       {todos.map((todo) => (
-        <div key={todo.tId} className="todo-item-container">
+        <div key={todo.tId} className="list-item">
           <p className="taskName">{todo.taskName}</p>
           <input type="checkbox" onClick={() => toggleIsCompleted(todo.tId)} />
-          <button onClick={() => handleDelete(todo.tId)}>Delete</button>
+          <button className="btn" onClick={() => handleDelete(todo.tId)}>
+            Delete
+          </button>
         </div>
       ))}
     </div>

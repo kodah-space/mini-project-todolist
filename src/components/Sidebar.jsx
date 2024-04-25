@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="sidebar-container">
+    <div className="sidebar">
       <ul>
         <li>
           {" "}

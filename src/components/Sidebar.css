@@ -1,4 +1,16 @@
-.sidebar-container {
-  background-color: rgba(86, 86, 86, 0.5);
-  width: 15%;
+.sidebar {
+  background-color: #764248;
+  color: white;
+  padding: 1rem;
+  width: 200px; /* Fixed width for the sidebar */
+  height: calc(100vh - 50px); /* Full height minus the navbar height */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1rem;
 }

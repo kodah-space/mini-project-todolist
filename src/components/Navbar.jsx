@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <div className="nav-bar-container">
+    <div className="navbar">
       <h1>Todo App</h1>
       {/* Place your logo here */}
       {/* <img src="/logo192.png" alt="App Logo" style={{ width: 50 }} /> */}

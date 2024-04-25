@@ -47,20 +47,19 @@ function Lists() {
   return (
     <div className="list-container">
       <h2>List</h2>
-      <form onSubmit={handleAddList}>
+      <form className="input-group" onSubmit={handleAddList}>
         <input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Add a new list"
+          className="input-group-button"
         />
-        <button type="submit">+</button>
+        <button className="input-group-button" type="submit">
+          +
+        </button>
       </form>
-      {/* <p>
-        {isCompletedCount}/{count} done
-      </p> */}
       <ListItems list={list} handleDelete={handleDelete} />
-      {/* <Dashboard /> */}
     </div>
   );
 }

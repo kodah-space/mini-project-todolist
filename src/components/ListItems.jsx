@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Dashboard from "../pages/ListOfTodos";
+import "./ListItem.css";
 
 function ListItems({ list, handleDelete }) {
   return (
     <div>
       <div className="list-container">
         {list.map((e) => (
-          <div key={e.id} className="todo-item-container">
+          <div key={e.id} className="list-item">
             <p className="listName">{e.listName}</p>
 
             <Link
@@ -16,10 +17,12 @@ function ListItems({ list, handleDelete }) {
               }}
               key={e.id}
             >
-              <button>See the tasks</button>
+              <button className="btn">See the tasks</button>
             </Link>
 
-            <button onClick={() => handleDelete(e.id)}>Delete</button>
+            <button className="btn" onClick={() => handleDelete(e.id)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>{" "}

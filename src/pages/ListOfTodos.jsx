@@ -58,18 +58,20 @@ function ListOfTodos() {
   }
 
   return (
-    <div className="dashboard-container">
+    <div className="list-container">
       <h2>Task</h2>
 
-      <form onSubmit={handleAddTask}>
+      <form className="input-group" onSubmit={handleAddTask}>
         <input
           type="text"
-          className="task-form"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Add a new task"
+          className="input-group-input"
         />
-        <button type="submit">+</button>
+        <button className="input-group-button" type="submit">
+          +
+        </button>
       </form>
 
       <p>
